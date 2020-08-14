@@ -38,7 +38,7 @@
   },
   "homepage": "https://github.com/TA-Geoforce/react-leaflet-google-v2#readme",
   "dependencies": {
-    "google-maps": "^3.3.0"
+    "google-maps": "^4.3.2"
   },
   "peerDependencies": {
     "leaflet": "^1.5.0",
