@@ -1,7 +1,7 @@
 import React from 'react';
-import { Map, TileLayer, LayersControl } from 'react-leaflet'
-import { GoogleLayer } from '../dist'
-const { BaseLayer} = LayersControl;
+import { MapContainer, TileLayer, LayersControl } from 'react-leaflet'
+import { GoogleLayer } from '../src'
+const { BaseLayer } = LayersControl;
 const key = 'AIzaSyDEG4lyorD61vnJoAHG0FkQERZ-McElZyg';
 const terrain = 'TERRAIN';
 const road = 'ROADMAP';
@@ -17,7 +17,7 @@ export default class GoogleExample extends React.Component {
 
   render() {
     return (
-      <Map center={[42.09618442380296, -71.5045166015625]} zoom={2} zoomControl={true}>
+      <MapContainer center={[42.09618442380296, -71.5045166015625]} zoom={2} zoomControl={true}>
         <LayersControl position='topright'>
           <BaseLayer  name='OpenStreetMap.Mapnik'>
             <TileLayer  url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"/>
@@ -38,7 +38,7 @@ export default class GoogleExample extends React.Component {
             <GoogleLayer googlekey={key}  maptype={hydrid}  libraries={['geometry', 'places']} />
           </BaseLayer>        
         </LayersControl>
-      </Map>
+      </MapContainer>
     )
   }
 }

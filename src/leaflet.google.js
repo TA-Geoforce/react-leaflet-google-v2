@@ -31,7 +31,7 @@ L.GridLayer.GoogleMutant = L.GridLayer.extend({
   initialize(options) {
     L.GridLayer.prototype.initialize.call(this, options);
     let self = this;
-    GoogleMapsLoader.VERSION = options.version || "3.38";
+    GoogleMapsLoader.VERSION = options.version || "3.43";
     if ( options.asclientid ) {
       GoogleMapsLoader.CLIENT = options.googlekey;
     } else {
